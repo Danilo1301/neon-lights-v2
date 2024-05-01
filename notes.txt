@@ -1,0 +1,40 @@
+--- version notes ---
+
+[2.0.0]
+First release
+
+[2.1.0]
+[X] FIX: lightId offset not beeing applied
+[X] ADD: light_id_offset and language to settings.json
+[X] ADD: keybinds
+[X] CHANGE: buttons from PositionEditor
+[X] FIX: some incorrect windows' title names
+
+[2.1.0 Update 1]
+[X] FIX: fix bug when renaming the vehicle id in /vehicles
+
+--- todo (maybe) ---
+
+--- release ---
+
+Check files folder
+
+Change README EN
+Change README PT-BR
+
+Check Mod::m_Version
+Check logs
+
+Add ASI to zip
+Add LOCALIZATION, if needed
+Add OTHER DATA, if needed
+
+Pull
+
+--- build ---
+
+* plugin-sdk
+https://github.com/DK22Pac/plugin-sdk/commit/62a1080902627b3edec0124acf02127ba8c0dcdb
+no xp support
+
+* Visual Studio 2019

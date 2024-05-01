@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GTASA Release|Win32">
+      <Configuration>GTASA Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GTASA zDebug|Win32">
+      <Configuration>GTASA zDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B212DDA4-2A8E-45B2-914D-7BEEB31D06B1}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Neon_Lights</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GTASA Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GTASA zDebug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GTASA Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GTASA zDebug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GTASA Release|Win32'">
+    <OutDir>$(GTA_SA_DIR)\modloader\Neon Lights\</OutDir>
+    <IntDir>$(ProjectDir).obj\GTASA\Release\</IntDir>
+    <TargetName>NeonLights</TargetName>
+    <TargetExt>.asi</TargetExt>
+    <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GTASA zDebug|Win32'">
+    <OutDir>$(GTA_SA_DIR)\modloader\Neon Lights\</OutDir>
+    <IntDir>$(ProjectDir).obj\GTASA\Debug\</IntDir>
+    <TargetName>NeonLights_d</TargetName>
+    <TargetExt>.asi</TargetExt>
+    <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GTASA Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(PLUGIN_SDK_DIR)\plugin_sa\;$(PLUGIN_SDK_DIR)\plugin_sa\game_sa\;$(PLUGIN_SDK_DIR)\shared\;$(PLUGIN_SDK_DIR)\shared\game\;$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_NDEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;GTASA;GTAGAME_NAME="San Andreas";GTAGAME_ABBR="SA";GTAGAME_ABBRLOW="sa";GTAGAME_PROTAGONISTNAME="CJ";GTAGAME_CITYNAME="San Andreas";_LA_SUPPORT;PLUGIN_SGV_10US;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(PLUGIN_SDK_DIR)\output\lib\;$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>plugin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GTASA zDebug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(PLUGIN_SDK_DIR)\plugin_sa\;$(PLUGIN_SDK_DIR)\plugin_sa\game_sa\;$(PLUGIN_SDK_DIR)\shared\;$(PLUGIN_SDK_DIR)\shared\game\;$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;GTASA;GTAGAME_NAME="San Andreas";GTAGAME_ABBR="SA";GTAGAME_ABBRLOW="sa";GTAGAME_PROTAGONISTNAME="CJ";GTAGAME_CITYNAME="San Andreas";_LA_SUPPORT;PLUGIN_SGV_10US;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(PLUGIN_SDK_DIR)\output\lib\;$(ProjectDir)lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>plugin_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\include\json_reader.cpp" />
+    <ClCompile Include="..\include\json_value.cpp" />
+    <ClCompile Include="..\include\json_writer.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="input\Input.cpp" />
+    <ClCompile Include="Keybinds.cpp" />
+    <ClCompile Include="LightGroups.cpp" />
+    <ClCompile Include="localization\Localization.cpp" />
+    <ClCompile Include="log\Log.cpp" />
+    <ClCompile Include="menu\item\ButtonKey.cpp" />
+    <ClCompile Include="menu\item\CheckBox.cpp" />
+    <ClCompile Include="menu\item\Item.cpp" />
+    <ClCompile Include="menu\item\NumberRange.cpp" />
+    <ClCompile Include="menu\item\Options.cpp" />
+    <ClCompile Include="menu\Menu.cpp" />
+    <ClCompile Include="menu\PositionEditor.cpp" />
+    <ClCompile Include="menu\TextEditor.cpp" />
+    <ClCompile Include="menu\Window.cpp" />
+    <ClCompile Include="Mod.cpp" />
+    <ClCompile Include="Patterns.cpp" />
+    <ClCompile Include="TestHelper.cpp" />
+    <ClCompile Include="VehicleDummy.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
+    <ClCompile Include="Vehicles.cpp" />
+    <ClCompile Include="windows\WindowLightGroup.cpp" />
+    <ClCompile Include="windows\WindowMain.cpp" />
+    <ClCompile Include="windows\WindowPattern.cpp" />
+    <ClCompile Include="windows\WindowPoint.cpp" />
+    <ClCompile Include="windows\WindowSettings.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="input\Input.h" />
+    <ClInclude Include="Keybind.h" />
+    <ClInclude Include="Keybinds.h" />
+    <ClInclude Include="LightGroup.h" />
+    <ClInclude Include="LightGroupData.h" />
+    <ClInclude Include="LightGroups.h" />
+    <ClInclude Include="localization\Localization.h" />
+    <ClInclude Include="log\Log.h" />
+    <ClInclude Include="menu\item\ButtonKey.h" />
+    <ClInclude Include="menu\item\CheckBox.h" />
+    <ClInclude Include="menu\item\Item.h" />
+    <ClInclude Include="menu\item\NumberRange.h" />
+    <ClInclude Include="menu\item\Options.h" />
+    <ClInclude Include="menu\Menu.h" />
+    <ClInclude Include="menu\PositionEditor.h" />
+    <ClInclude Include="menu\TextEditor.h" />
+    <ClInclude Include="menu\Window.h" />
+    <ClInclude Include="Mod.h" />
+    <ClInclude Include="Pattern.h" />
+    <ClInclude Include="Patterns.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="TestHelper.h" />
+    <ClInclude Include="VehicleDummy.h" />
+    <ClInclude Include="Vehicle.h" />
+    <ClInclude Include="Vehicles.h" />
+    <ClInclude Include="windows\WindowLightGroup.h" />
+    <ClInclude Include="windows\WindowMain.h" />
+    <ClInclude Include="windows\WindowPattern.h" />
+    <ClInclude Include="windows\WindowPoint.h" />
+    <ClInclude Include="windows\WindowSettings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\json_valueiterator.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\notes.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
