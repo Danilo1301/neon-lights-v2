@@ -1,13 +1,13 @@
 <h1>EN:</h1>
 
 ## Required
-1. CLEO
-2. Modloader
-3. Version **GTA 1.0 US** (You can [download here](http://miscellaneous-c.blogspot.com/2016/04/crack-gta-sa-v10-us-hoodlum-no-cd-fixed.html))
-4. Open Limit Adjuster or Fastman92 Limit Adjuster
+1. Version **GTA SA 1.0 US**
+2. CLEO or any ASI Loader
+3. Modloader
+4. fastman92 Limit Adjuster or Open Limit Adjuster
 
 ## How to install
-1. [Download here (v2.1.0)](https://github.com/Danilo1301/neon-lights/releases/tag/v2.1.0)
+1. Download the .zip in [Releases](https://github.com/Danilo1301/neon-lights-v2/releases)
 2. Drag and drop the **modloader** folder to your GTA folder
 
 ## How to use
@@ -25,13 +25,13 @@ You can customize the keys in 'Neon Lights/data/settings.json'
 <h1>PT-BR:</h1>
 
 ## Necessário
-1. CLEO
-2. Modloader
-3. Versão **GTA 1.0 US** (Você pode [baixar aqui](http://miscellaneous-c.blogspot.com/2016/04/crack-gta-sa-v10-us-hoodlum-no-cd-fixed.html))
-4. Open Limit Adjuster ou Fastman92 Limit Adjuster
+1. Versão **GTA SA 1.0 US**
+2. CLEO ou algum ASI Loader
+3. Modloader
+4. fastman92 Limit Adjuster ou Open Limit Adjuster
 
 ## Como instalar
-1. [Baixe aqui (v2.1.0)](https://github.com/Danilo1301/neon-lights/releases/tag/v2.1.0)
+1. Baixe o .zip em [Releases](https://github.com/Danilo1301/neon-lights-v2/releases)
 2. Arraste a pasta **modloader** para a pasta raíz do seu GTA
 
 ## Como usar
